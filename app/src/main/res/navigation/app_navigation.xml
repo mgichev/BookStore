@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_nav"
+    app:startDestination="@id/AuthorizationFragment">
+
+    <fragment
+        android:id="@+id/AuthorizationFragment"
+        android:name="com.example.bookstore.ui.screens.authorization_screen.AuthorizationFragment"
+        android:label="AuthorizationFragment" >
+        <action
+            android:id="@+id/action_authorizationFragment_to_shopFragment"
+            app:destination="@id/ShopFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/AccountFragment"
+        android:name="com.example.bookstore.ui.screens.account_screen.AccountFragment"
+        android:label="fragment_account"
+        tools:layout="@layout/fragment_account" >
+        <action
+            android:id="@+id/action_AccountFragment_to_cartListFragment"
+            app:destination="@id/cartListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/LibraryFragment"
+        android:name="com.example.bookstore.ui.screens.library_screen.LibraryFragment"
+        android:label="fragment_library"
+        tools:layout="@layout/fragment_library" />
+    <fragment
+        android:id="@+id/ShopFragment"
+        android:name="com.example.bookstore.ui.screens.shop_screen.fragments.ShopFragment"
+        android:label="fragment_shop"
+        tools:layout="@layout/fragment_shop" >
+        <action
+            android:id="@+id/action_ShopFragment_to_searchFragment"
+            app:destination="@id/SearchFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/SearchFragment"
+        android:name="com.example.bookstore.ui.screens.search_screen.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" />
+    <fragment
+        android:id="@+id/cartListFragment"
+        android:name="com.example.bookstore.ui.screens.cart_screen.CartListFragment"
+        android:label="CartListFragment" />
+    <fragment
+        android:id="@+id/BookPageFragment"
+        android:name="com.example.bookstore.ui.screens.book_screen.BookPageFragment"
+        android:label="BookPageFragment" />
+</navigation>

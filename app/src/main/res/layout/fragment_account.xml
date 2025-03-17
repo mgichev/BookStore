@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto" >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.screens.account_screen.AccountFragment">
+
+        <ImageView
+            android:src="@drawable/account_circle_24"
+            android:id="@+id/accountIV"
+            android:layout_width="240dp"
+            android:layout_height="240dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_margin="16dp" />
+
+        <TextView
+            android:id="@+id/shopTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Покупки"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/accountIV"
+            android:textSize="32sp"
+            android:layout_margin="16dp" />
+
+        <include
+            layout="@layout/account_item"
+            android:id="@+id/cartLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/shopTitle" />
+
+        <include
+            layout="@layout/account_item"
+            android:id="@+id/ordersLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cartLayout" />
+
+        <TextView
+            android:id="@+id/myLibraryTitleTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Моя библиотека"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ordersLayout"
+            android:textSize="32sp"
+            android:layout_margin="16dp" />
+
+        <include
+            layout="@layout/account_item"
+            android:id="@+id/amountOfBooksLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/myLibraryTitleTV" />
+
+        <include
+            layout="@layout/account_item"
+            android:id="@+id/readBooksLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/amountOfBooksLayout" />
+
+        <include
+            layout="@layout/account_item"
+            android:id="@+id/readingBooksLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/readBooksLayout" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
